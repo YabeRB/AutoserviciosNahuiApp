@@ -15,12 +15,15 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="32dp">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/btnBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_gravity="start|center_vertical"
+                android:padding="4dp"
                 android:src="@drawable/ic_arrow_back"
                 app:tint="#FFFFFF" />
 
@@ -37,6 +40,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:text="Autoservicios Ñahui"
             android:textColor="#FFFFFF"
             android:textSize="32sp"
@@ -45,8 +49,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
             android:text="Crea tu cuenta para empezar"
             android:textColor="#8B8E9F"
             android:textSize="14sp" />
@@ -65,13 +69,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:boxBackgroundColor="#161A30"
-            app:boxBackgroundMode="filled"
             app:boxCornerRadiusBottomEnd="12dp"
-            app:boxCornerRadiusBottomStart="11dp"
+            app:boxCornerRadiusBottomStart="12dp"
             app:boxCornerRadiusTopEnd="12dp"
             app:boxCornerRadiusTopStart="12dp"
             app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
             app:hintEnabled="false"
             app:startIconDrawable="@drawable/ic_person"
             app:startIconTint="#6B6E84">
@@ -81,8 +83,6 @@
                 android:layout_height="wrap_content"
                 android:hint="Ej. Juan Pérez"
                 android:inputType="textPersonName"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#6B6E84" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -101,13 +101,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:boxBackgroundColor="#161A30"
-            app:boxBackgroundMode="filled"
             app:boxCornerRadiusBottomEnd="12dp"
             app:boxCornerRadiusBottomStart="12dp"
             app:boxCornerRadiusTopEnd="12dp"
             app:boxCornerRadiusTopStart="12dp"
             app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
             app:hintEnabled="false"
             app:startIconDrawable="@drawable/ic_email"
             app:startIconTint="#6B6E84">
@@ -117,8 +115,6 @@
                 android:layout_height="wrap_content"
                 android:hint="ejemplo@correo.com"
                 android:inputType="textEmailAddress"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#6B6E84" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -137,13 +133,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:boxBackgroundColor="#161A30"
-            app:boxBackgroundMode="filled"
             app:boxCornerRadiusBottomEnd="12dp"
             app:boxCornerRadiusBottomStart="12dp"
             app:boxCornerRadiusTopEnd="12dp"
             app:boxCornerRadiusTopStart="12dp"
             app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
             app:hintEnabled="false"
             app:startIconDrawable="@drawable/ic_phone"
             app:startIconTint="#6B6E84">
@@ -153,8 +147,6 @@
                 android:layout_height="wrap_content"
                 android:hint="+51 987 654 321"
                 android:inputType="phone"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#6B6E84" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -173,13 +165,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:boxBackgroundColor="#161A30"
-            app:boxBackgroundMode="filled"
             app:boxCornerRadiusBottomEnd="12dp"
             app:boxCornerRadiusBottomStart="12dp"
             app:boxCornerRadiusTopEnd="12dp"
             app:boxCornerRadiusTopStart="12dp"
             app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
             app:endIconMode="password_toggle"
             app:endIconTint="#6B6E84"
             app:hintEnabled="false"
@@ -191,8 +181,6 @@
                 android:layout_height="wrap_content"
                 android:hint="••••••••"
                 android:inputType="textPassword"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#6B6E84" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -211,15 +199,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:boxBackgroundColor="#161A30"
-            app:boxBackgroundMode="filled"
             app:boxCornerRadiusBottomEnd="12dp"
             app:boxCornerRadiusBottomStart="12dp"
             app:boxCornerRadiusTopEnd="12dp"
             app:boxCornerRadiusTopStart="12dp"
             app:boxStrokeWidth="0dp"
-            app:boxStrokeWidthFocused="0dp"
             app:hintEnabled="false"
-            app:startIconDrawable="@drawable/ic_lock_reset"
+            app:startIconDrawable="@drawable/ic_lock"
             app:startIconTint="#6B6E84">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -227,8 +213,6 @@
                 android:layout_height="wrap_content"
                 android:hint="••••••••"
                 android:inputType="textPassword"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#6B6E84" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -256,32 +240,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="términos y condiciones"
-                android:textColor="#1C2680"
+                android:textColor="#4F6BFF"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCrearCuenta"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="24dp"
             android:text="Crear cuenta"
+            android:textColor="#FFFFFF"
             android:textAllCaps="false"
             android:textSize="16sp"
             android:textStyle="bold"
             app:backgroundTint="#1C2680"
             app:cornerRadius="12dp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
             android:orientation="horizontal">
 
             <TextView
@@ -292,24 +274,14 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/tvLoginLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="4dp"
                 android:text="Iniciar sesión"
-                android:textColor="#1C2680"
+                android:textColor="#4F6BFF"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-        </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

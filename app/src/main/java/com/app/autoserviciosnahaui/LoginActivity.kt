@@ -1,20 +1,32 @@
 package com.app.autoserviciosnahaui
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class LoginActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_login)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        // 1. Encontrar las vistas
+        val tvRegisterLink = findViewById<TextView>(R.id.tvRegisterLink)
+        val btnBack = findViewById<ImageView>(R.id.btnBack)
+
+        // 2. Evento para ir a la pantalla de Registro
+        tvRegisterLink.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+            // No usamos finish() aquí para que si el usuario retrocede desde registro,
+            // vuelva al login y no a la pantalla de bienvenida directamente.
+        }
+
+        // 3. Evento para la flecha de atrás (Vuelve a Welcome)
+        btnBack.setOnClickListener {
+            finish() // Cierra el login y regresa a la actividad anterior (Welcome)
         }
     }
 }

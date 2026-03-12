@@ -1,10 +1,9 @@
 package com.app.autoserviciosnahaui
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.button.MaterialButton
 
 class WelcomeActivity : AppCompatActivity() {
 
@@ -12,15 +11,22 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
-        val login = findViewById<Button>(R.id.btnLogin)
-        val register = findViewById<Button>(R.id.btnRegister)
+        // 1. Encontrar los botones en el layout por su ID
+        val btnLogin = findViewById<MaterialButton>(R.id.btnLogin)
+        val btnRegister = findViewById<MaterialButton>(R.id.btnRegister)
 
-        login.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+        // 2. Asignar el evento "onClick" al botón de Login
+        btnLogin.setOnClickListener {
+            // Crear un Intent para ir de WelcomeActivity a LoginActivity
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
 
-        register.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+        // 3. Asignar el evento "onClick" al botón de Registro
+        btnRegister.setOnClickListener {
+            // Crear un Intent para ir de WelcomeActivity a RegistroActivity
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 }
