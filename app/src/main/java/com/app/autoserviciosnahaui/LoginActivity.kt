@@ -28,5 +28,15 @@ class LoginActivity : AppCompatActivity() {
         btnBack.setOnClickListener {
             finish() // Cierra el login y regresa a la actividad anterior (Welcome)
         }
+
+        // Encontrar el botón de "¿Olvidé mi contraseña?"
+        val tvForgotPassword = findViewById<TextView>(R.id.tvForgotPassword)
+
+        // Asignarle el evento de clic
+        tvForgotPassword.setOnClickListener {
+            // Crear el Intent para ir a ForgotPasswordActivity
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
